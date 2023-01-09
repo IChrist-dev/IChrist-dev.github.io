@@ -1,0 +1,65 @@
+/*Author: Ian Christian
+Final Project - WEBD 1000
+Due Date: December 9, 2022*/
+
+.list-tiles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-desc {
+    width: 100%;
+    text-align: center;
+}
+
+.project-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    width: 40%;
+    height: auto;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 75px;
+    transition: 1s;
+}
+
+.tile:hover {
+    background-color: #6fbcd3b4;
+}
+
+.tile h1 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.main-container p {
+    font-size: 1.3em;
+}
+
+@media screen and (max-width: 900px) {
+    .list-tiles {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .main-container .list-tiles {
+        padding: 20px;
+        border-radius: 50px;
+    }
+
+    .tile {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 25px;
+    }
+}

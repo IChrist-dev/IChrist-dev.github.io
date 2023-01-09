@@ -1,0 +1,77 @@
+/*Author: Ian Christian
+Final Project - WEBD 1000
+Due Date: December 9, 2022*/
+
+#resume-doc h1 {
+    margin-top: 0px;
+}
+
+#resume-doc h1 {
+    font-size: 4em;
+    text-align: center;
+}
+
+#resume-doc h2 {
+    font-size: 2em;
+}
+
+#resume-doc p {
+    font-size: 1.2em;
+}
+
+.break-line {
+    border: 1px dashed #000;
+    width: 100%;
+}
+
+.workplace-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.workplace-line p {
+    text-decoration: underline;
+}
+
+#download {
+    display: block;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+#download a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    background-color: #6fbbd3;
+    font-size: 1.5em;
+    border: 1px solid #000;
+    border-radius: 10px;
+    transition: background-color 1s;
+}
+
+#download a:visited {
+    color: #000;
+}
+
+#download a:hover {
+    background-color: #4b9db7;
+}
+
+#download a:active {
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 900px) {
+    #resume-doc section {
+        padding: 0;
+    }
+
+    #download {
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,95 @@
+/*Author: Ian Christian
+Final Project - WEBD 1000
+Due Date: December 9, 2022*/
+
+.main-container .wrapper {
+    top: -5vh;
+}
+
+form {
+    padding: 20px;
+    width: 85%;
+}
+
+label {
+    font-size: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 5px 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 5px 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#form-message {
+    padding: 5px 3px 5px 3px;
+    resize: vertical;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#submit-button {
+    background-color: #6fbbd3;
+    font-size: 1.5em;
+    border: 1px solid #000;
+    border-radius: 10px;
+    transition: all .2s;
+}
+
+#submit-button:hover {
+    background-color: #4b9db7;
+    font-weight: bolder;
+}
+
+/*Text scaling at very narrow screen sizes*/
+@media screen and (max-width: 400px) {
+    .main-container h1 {
+        font-size: 8vw;
+    }
+
+    .main-container p {
+        font-size: 5vw;
+    }
+
+    .main-container label,
+    .contact-container #submit-button {
+        font-size: 5vw;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .contact-container h1,
+    .contact-container p {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .contact-container {
+        margin-top: 10vh;
+    }
+
+    .main-container .fade-in {
+        border-radius: 50px;
+    }
+
+    form {
+        padding: 0;
+    }
+
+    #submit-button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
