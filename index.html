@@ -1,12 +1,84 @@
+<!--Author: Ian Christian
+Final Project - WEBD 1000
+Due Date: December 9, 2022-->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="mountain-sun-solid.svg">
+    <link rel="stylesheet" href="animations-style.css">
+    <link rel="stylesheet" href="master-style.css">
+    <link rel="stylesheet" href="alignments.css">
+    <link rel="stylesheet" href="contact-tiles.css">
 </head>
+
 <body>
-    <a href="home.html">Go to website...</a>
+    <header class="header fade-in">
+        <div class="nav-container">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo">
+                    <img src="ian-site-logo.png" alt="logo-image">
+                </div>
+                <input type="checkbox" id="nav-check">
+                <label for="nav-check" class="nav-toggler">
+                    <span></span>
+                </label>
+                <div class="nav">
+                    <ul>
+                        <li><a href="home.html" class="active">Home</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--Background is a looping video downloaded for free via: 
+    https://pixabay.com/videos/rendering-3d-movement-geometry-26011/
+    No attribution required-->
+    <div class="fade-in">
+        <video autoplay muted loop id="backgroundVideo">
+            <source src="tiles-loop.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="main-container put-center">
+        <div class="wrapper fade-in">
+            <div id="profile">
+                <img src="profile-pic.JPG" class="put-center" alt="my face">
+            </div>
+            <section>
+                <h1>Ian Christian: Programming Student</h1>
+                <p>I am a first year IT Programming student at NSCC. I am interested in all parts of the software
+                    development life-cycle. When I'm not tapping away at my keyboard you'll find me riding bikes, baking
+                    pastries, and hiking in the great outdoors.<br>
+                <p>This website acts as the portfolio and access-point for my work as a programming student.</p>
+            </section>
+        </div>
+
+        <!--This section references the contact-tiles.css file-->
+        <div class="fade-in link-tiles">
+            <div class="contact-tile">
+                <a href="https://www.linkedin.com/in/ian-christian-7361a484/"><img src="linkedin-logo.png"
+                        alt="Link to LinkedIn Page"></a>
+            </div>
+            <div class="contact-tile">
+                <a href="https://github.com/IChrist-dev"><img src="github-logo.png" alt="Link to GitHub Page"></a>
+            </div>
+            <div class="contact-tile">
+                <a href="https://www.instagram.com/iclutherie/"><img src="instagram-logo.png"
+                        alt="Link to Instagram Page"></a>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
