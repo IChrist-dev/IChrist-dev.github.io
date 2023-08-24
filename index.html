@@ -1,84 +1,70 @@
-<!--Author: Ian Christian
-Final Project - WEBD 1000
-Due Date: December 9, 2022-->
+<!--
+Ian Christian
+APPD 1001 - Assignment 3
+W0480449
+-->
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="icon" type="image/x-icon" href="mountain-sun-solid.svg">
-    <link rel="stylesheet" href="animations-style.css">
-    <link rel="stylesheet" href="master-style.css">
-    <link rel="stylesheet" href="alignments.css">
-    <link rel="stylesheet" href="contact-tiles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="mystyle.css">
+    <title>Ian Christian</title>
 </head>
 
 <body>
-    <header class="header fade-in">
-        <div class="nav-container">
-            <div class="row align-items-center justify-content-between">
-                <div class="logo">
-                    <img src="ian-site-logo.png" alt="logo-image">
-                </div>
-                <input type="checkbox" id="nav-check">
-                <label for="nav-check" class="nav-toggler">
-                    <span></span>
-                </label>
-                <div class="nav">
-                    <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="skills.html">Skills</a></li>
-                        <li><a href="resume.html">Resume</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <header>
+        <span id="nav-line"></span>
+        <ul class="nav-links">
+            <li id="cell-one">
+                <span class="nav-dot"></span>
+                <a href="./index.html">Home</a>
+            </li>
+            <li id="cell-two">
+                <span class="nav-dot"></span>
+                <a href="./portfolio_page.html">Work</a>
+            </li>
+            <li id="cell-three">
+                <span class="nav-dot"></span>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
     </header>
 
-    <!--Background is a looping video downloaded for free via: 
-    https://pixabay.com/videos/rendering-3d-movement-geometry-26011/
-    No attribution required-->
-    <div class="fade-in">
-        <video autoplay muted loop id="backgroundVideo">
-            <source src="tiles-loop.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="main-container put-center">
-        <div class="wrapper fade-in">
-            <div id="profile">
-                <img src="profile-pic.JPG" class="put-center" alt="my face">
-            </div>
-            <section>
-                <h1>Ian Christian: Programming Student</h1>
-                <p>I am a first year IT Programming student at NSCC. I am interested in all parts of the software
-                    development life-cycle. When I'm not tapping away at my keyboard you'll find me riding bikes, baking
-                    pastries, and hiking in the great outdoors.<br>
-                <p>This website acts as the portfolio and access-point for my work as a programming student.</p>
-            </section>
-        </div>
-
-        <!--This section references the contact-tiles.css file-->
-        <div class="fade-in link-tiles">
-            <div class="contact-tile">
-                <a href="https://www.linkedin.com/in/ian-christian-7361a484/"><img src="linkedin-logo.png"
-                        alt="Link to LinkedIn Page"></a>
-            </div>
-            <div class="contact-tile">
-                <a href="https://github.com/IChrist-dev"><img src="github-logo.png" alt="Link to GitHub Page"></a>
-            </div>
-            <div class="contact-tile">
-                <a href="https://www.instagram.com/iclutherie/"><img src="instagram-logo.png"
-                        alt="Link to Instagram Page"></a>
+    <main>
+        <div class="container">
+            <div class="welcome-card">
+                <img src="./Assets/Profile.jpg" alt="profile picture">
+                <div class="welcome-text">
+                    <h1>Ian Christian</h1>
+                    <h2>Junior Developer</h2>
+                    <p>I write software that is:</p>
+                    <p id="line-one">effective</p>
+                    <p id="line-two">efficient</p>
+                    <p id="line-three">elegant</p>
+                    <a href="#">Contact</a>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 
+    <footer>
+        <ul class="footer-links">
+            <li><a href="https://github.com/IChrist-dev"><img src="./Assets/github_icon.svg" alt="github logo"></a></li>
+            <li><a href="https://www.linkedin.com/in/ian-christian-7361a484/"><img src="./Assets/linkedin_icon.svg"
+                        alt="linkedin logo"></a></li>
+            <li><a href="https://www.instagram.com/iclutherie/"><img src="./Assets/instagram_icon.svg"
+                        alt="instagram logo"></a></li>
+        </ul>
+    </footer>
 </body>
 
 </html>

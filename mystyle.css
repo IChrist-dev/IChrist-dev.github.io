@@ -1,0 +1,499 @@
+/*
+Ian Christian
+APPD 1001 - Assignment 3
+W0480449
+*/
+
+/*Animations*/
+@keyframes left-flyin {
+    0% {
+        left: -100px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes left-flyin-no-fade {
+    0% {
+        left: -2000px;
+        width: 0;
+    }
+
+
+    100% {
+        left: 0;
+        width: 100%;
+    }
+}
+
+@keyframes right-flyin {
+    0% {
+        right: -1000px;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes center-fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*Common-page CSS*/
+:root {
+    --bs-font-sans-serif: 'Helvetica', sans-serif;
+}
+
+h1 {
+    font-size: 4.1em;
+    font-family: Garamond;
+    font-weight: 100;
+}
+
+h1,
+h2,
+p,
+a {
+    color: #fffbf1;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+body {
+    background-image: url("./Assets/Subway_tiles_image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.shadow-dark {
+    box-shadow: 10px 10px 50px 0px #241e1999;
+}
+
+header {
+    padding: 20px 0;
+    background-color: #241e19;
+}
+
+#nav-line {
+    display: block;
+    height: 20px;
+    width: 100%;
+    background-color: #49aabc;
+    animation-name: left-flyin-no-fade;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.nav-links {
+    z-index: 2;
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    animation-name: left-flyin-no-fade;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.nav-links li {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.nav-dot {
+    height: 20px;
+    width: 20px;
+    background-color: #fffbf1;
+    border: 2px #241e19 solid;
+    border-radius: 50%;
+    outline: 4px #49aabc solid;
+    display: inline-block;
+    position: relative;
+    top: -20px;
+    right: 8px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 2.3em;
+    padding: 5px;
+    transform: rotate(-30deg);
+}
+
+.nav-links li:hover a {
+    color: #e7c14e;
+}
+
+.nav-links li:hover .nav-dot {
+    background-color: #e7c14e;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: max-content;
+}
+
+.welcome-card {
+    margin-top: 18vh;
+    padding: 3em;
+    width: auto;
+    background-color: #241e19;
+    border-radius: 20px;
+    display: flex;
+    animation-name: left-flyin;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+}
+
+.welcome-text {
+    padding-left: 2em;
+}
+
+.welcome-card img {
+    max-height: 30em;
+    border-radius: 20px;
+}
+
+.welcome-card h1,
+h2 {
+    padding-bottom: 20px;
+}
+
+.welcome-text p {
+    font-size: 1.1em;
+}
+
+#line-one,
+#line-two,
+#line-three {
+    font-weight: bolder;
+    margin-bottom: 50px;
+}
+
+#line-two {
+    color: #e7c14e;
+    padding-left: 30px;
+}
+
+#line-three {
+    color: #ee8438;
+    padding-left: 60px;
+}
+
+.welcome-text a {
+    margin: 90px;
+    border-radius: 15px;
+    padding: 15px 40px;
+    background-color: #49aabc;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+footer {
+    position: relative;
+    padding: 6em 0 2em 0;
+    align-items: center;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links img {
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+}
+
+/*Portofilio-specific CSS*/
+#projects h1 {
+    font-family: Garamond;
+    background-color: #241e19;
+    width: max-content;
+    padding: 15px 40px;
+    border-radius: 15px;
+    margin: 6vh auto 2vh;
+}
+
+.tile-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.row-pair {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5em 0 0 10%;
+}
+
+.card {
+    height: 30em;
+    width: 17.875em;
+    background-color: #00000000;
+    border-radius: 20px;
+    transition: .5s;
+    transition-property: box-shadow;
+    margin: 0 10%;
+    animation-name: left-flyin;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+}
+
+/*Odd height and width % is to hide a gap in the .card box shadow, resulting from the parent card*/
+.card-img-top {
+    min-height: 100.5%;
+    min-width: 100.5%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card-title {
+    text-align: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    position: relative;
+    padding: 0 20px 0;
+    margin: 0;
+    bottom: 100px;
+}
+
+.card-overlay {
+    position: absolute;
+    height: 100.5%;
+    width: 100.5%;
+    top: 0;
+    border-radius: 0 0 20px 20px;
+}
+
+.info-sidebar {
+    background-color: #241e19;
+    background: linear-gradient(90deg, #241e19 0%, #241e19c0 50%, #241e197f 75%, #241e1900 100%);
+    width: 60%;
+    padding: 2em 30vw 2em 2em;
+    border-radius: 20px;
+    position: relative;
+    right: 0;
+    animation-name: right-flyin;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.info-sidebar h2 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.info-sidebar h3 {
+    color: #fffbf1;
+}
+
+.card:hover .card-img-top {
+    filter: grayscale(80%);
+    transition: .5s;
+}
+
+#card-one:hover {
+    box-shadow: 10px 10px 50px 0px #e7c14e80;
+}
+
+#card-two:hover {
+    box-shadow: 10px 10px 50px 0px #ee843880;
+}
+
+#card-three:hover {
+    box-shadow: 10px 10px 50px 0px #49aabcbf;
+}
+
+/*Responsive Section*/
+@media screen and (max-width: 1750px) {
+    .info-sidebar {
+        padding: 2em 16vw 2em 2em;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .nav-line {
+        visibility: hidden;
+    }
+
+    .row-pair {
+        flex-direction: column;
+        align-items: center;
+        margin: 2em;
+    }
+
+    .card {
+        animation-name: center-fadein;
+        animation-duration: .5s;
+        animation-timing-function: ease-out;
+    }
+
+    .info-sidebar {
+        background-color: #241e19;
+        width: auto;
+        padding: 2em;
+        margin: 2em;
+        animation-name: center-fadein;
+        animation-duration: .5s;
+        animation-timing-function: ease-out;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    header {
+        padding: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links a {
+        padding-right: 20px;
+        transform: rotate(0);
+    }
+
+    .nav-links li:hover a {
+        color: #fffbf1;
+        font-weight: 700;
+    }
+
+    #cell-one {
+        background: linear-gradient(90deg, #e7c14e 0%, #e7c14e00 100%);
+    }
+
+    #cell-two {
+        background: linear-gradient(90deg, #ee8438 0%, #ee843800 100%);
+    }
+
+    #cell-three {
+        background: linear-gradient(90deg, #49aabc 0%, #49aabc00 100%);
+    }
+
+    #nav-line {
+        display: none;
+    }
+
+    .nav-dot {
+        display: none;
+    }
+
+    .welcome-card {
+        flex-direction: column;
+        max-width: fit-content;
+        padding: 1em;
+        margin-top: 5vh;
+    }
+
+    .welcome-card img {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        max-height: min-content;
+    }
+
+    .welcome-text {
+        padding: 10px;
+    }
+
+    .welcome-text h1 {
+        font-size: 3em;
+    }
+
+    .welcome-text a {
+        position: relative;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .card {
+        min-width: 70%;
+        margin: 0;
+    }
+
+    .card-img-top {
+        object-fit: cover;
+        width: auto;
+    }
+
+    .info-sidebar {
+        min-width: 70%;
+        margin: 2em 0;
+    }
+
+    .row-pair {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .welcome-text h1 {
+        font-size: 1.8em;
+    }
+
+    .welcome-text h2 {
+        font-size: 1.5em;
+    }
+
+    #projects h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 20vw;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
