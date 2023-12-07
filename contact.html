@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="mystyle.css">
+  <title>Projects</title>
+</head>
+
+<body>
+  <header>
+    <span id="nav-line"></span>
+    <ul class="nav-links">
+        <li id="cell-one">
+            <span class="nav-dot"></span>
+            <a href="./index.html">Home</a>
+        </li>
+        <li id="cell-two">
+            <span class="nav-dot"></span>
+            <a href="./portfolio_page.html">Work</a>
+        </li>
+        <li id="cell-three">
+            <span class="nav-dot"></span>
+            <a href="./contact.html">Contact</a>
+        </li>
+    </ul>
+</header>
+
+<main>
+    <div class="container">
+        <div class="col-md-8 mx-auto contact-card">
+            <h1 class="text-center">Get in touch</h1>
+        <p>If you like what you've seen here and want to discuss business propositions, don't hesitate to reach out
+        via the submission form below.<br><br>I will respond as soon as I can.</p>
+        
+        <!--Contact form redirects to 3rd party site.-->
+        <form action="https://formsubmit.co/053819788abf2e3ff7892a0d080f7b36" method="POST" class="contact-form">
+            
+            <input type="text" id="contact-name" name="contactName" placeholder="Full Name" required><br><br>
+            
+            <input type="email" id="contact-email" name="contactEmail" placeholder="Email" required><br><br>
+            
+            <label for="form-message">Message</label><br>
+            <textarea id="form-message" name="message" rows="10" required></textarea><br><br>
+
+            <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+        </form>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <ul class="footer-links">
+      <li><a href="https://github.com/IChrist-dev"><img src="./Assets/github_icon.svg" alt="github logo"></a></li>
+      <li><a href="https://www.linkedin.com/in/ian-christian-7361a484/"><img src="./Assets/linkedin_icon.svg"
+            alt="linkedin logo"></a></li>
+      <li><a href="https://www.instagram.com/iclutherie/"><img src="./Assets/instagram_icon.svg"
+            alt="instagram logo"></a></li>
+    </ul>
+  </footer>
+</body>
+
+</html>

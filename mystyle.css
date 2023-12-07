@@ -1,9 +1,3 @@
-/*
-Ian Christian
-APPD 1001 - Assignment 3
-W0480449
-*/
-
 /*Animations*/
 @keyframes left-flyin {
     0% {
@@ -343,6 +337,8 @@ footer {
     transition: .5s;
 }
 
+
+
 #card-one:hover {
     box-shadow: 10px 10px 50px 0px #e7c14e80;
 }
@@ -353,6 +349,33 @@ footer {
 
 #card-three:hover {
     box-shadow: 10px 10px 50px 0px #49aabcbf;
+}
+
+/*Contact-specific CSS*/
+.contact-card {
+    padding: 3em;
+    border-radius: 20px;
+    margin: 3em;
+    background-color: #241e19;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form > input {
+    width: 100%;
+}
+
+.contact-card label {
+    color: #fffbf1;
+}
+
+#form-message {
+    resize: vertical;
+    width: 100%;
+}
+
+button .submit-btn {
+    padding: 10px;
 }
 
 /*Responsive Section*/
@@ -475,6 +498,14 @@ footer {
 
     .row-pair {
         margin: 0;
+    }
+
+    .contact-card {
+        padding: 2em;
+    }
+
+    .contact-card h1 {
+        font-size: 3em;
     }
 }
 
