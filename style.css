@@ -82,7 +82,7 @@ body {
 }
 
 body {
-    background-image: url("./Assets/Subway_tiles_image.jpg");
+    background-image: url("./Assets/Subway_tiles_image_copy.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -171,6 +171,7 @@ header {
 .welcome-card {
     margin-top: 18vh;
     padding: 3em;
+    max-width: min-content;
     width: auto;
     background-color: #241e19;
     border-radius: 20px;
@@ -181,21 +182,33 @@ header {
 }
 
 .welcome-text {
+    position: relative;
     padding-left: 2em;
+    padding-right: 2em;
+    top: 0;
+    bottom: 0;
+    width: 100%;
 }
 
-.welcome-card img {
-    max-height: 30em;
+.welcome-img img {
+    width: fit-content;
+    min-width: 6vw;
+    min-height: auto;
+    max-height: 100%;
     border-radius: 20px;
 }
 
-.welcome-card h1,
+.welcome-text h1,
 h2 {
     padding-bottom: 20px;
 }
 
-.welcome-text p {
-    font-size: 1.1em;
+.welcome-text h1 {
+    font-size: 3.5em;
+}
+
+.welcome-text h2 {
+    font-size: 2em;
 }
 
 #line-one,
@@ -205,24 +218,81 @@ h2 {
     margin-bottom: 50px;
 }
 
+#line-one {
+    padding-left: 0;
+}
+
 #line-two {
     color: #e7c14e;
-    padding-left: 30px;
+    padding-left: 1.5vw;
 }
 
 #line-three {
     color: #ee8438;
-    padding-left: 60px;
+    padding-left: 3.5vw;
+}
+
+.welcome-text ul {
+    list-style-type: none;
+    padding-left: 0;
+    height: max-content;
+}
+
+.welcome-text h1,
+.welcome-text h2,
+.welcome-text p,
+.welcome-text a {
+    max-width: 100%;
+}
+
+.welcome-text ul li p {
+    
+    font-size: 1.1em;
 }
 
 .welcome-text a {
-    margin: 90px;
+    position: absolute;
+    bottom: 0;
+}
+
+.button {
+    margin: 0 2vw;
     border-radius: 15px;
-    padding: 15px 40px;
+    border: none;
+    padding: 1vh 2vw;
     background-color: #49aabc;
     text-decoration: none;
-    font-size: larger;
+    color: #241e19;
+    font-size: 1em;
     font-weight: bolder;
+}
+
+.button:active {
+    background-color: #3c8d9b;
+}
+
+.about-card {
+    margin-top: 18vh;
+    padding: 3em;
+    width: 40vw;
+    background-color: #241e19;
+    border-radius: 20px;
+    display: flex;
+    animation-name: left-flyin;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+}
+
+.about-text {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.about-text .container {
+    padding: 0;
+    margin: 0;
 }
 
 footer {
@@ -337,8 +407,6 @@ footer {
     transition: .5s;
 }
 
-
-
 #card-one:hover {
     box-shadow: 10px 10px 50px 0px #e7c14e80;
 }
@@ -379,7 +447,15 @@ button .submit-btn {
 }
 
 /*Responsive Section*/
-@media screen and (max-width: 1750px) {
+@media screen and (max-width: 1980px) {
+    .welcome-text h1 {
+        font-size: 3em;
+    }
+
+    .welcome-text h2 {
+        font: 2em;
+    }
+
     .info-sidebar {
         padding: 2em 16vw 2em 2em;
     }
@@ -413,7 +489,7 @@ button .submit-btn {
     }
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 920px) {
     header {
         padding: 0;
     }
@@ -433,15 +509,19 @@ button .submit-btn {
     }
 
     #cell-one {
-        background: linear-gradient(90deg, #e7c14e 0%, #e7c14e00 100%);
+        background: linear-gradient(90deg, #fffbf1 0%, #241e19 100%);
     }
 
     #cell-two {
-        background: linear-gradient(90deg, #ee8438 0%, #ee843800 100%);
+        background: linear-gradient(90deg, #e7c14e 0%, #241e19 100%);
     }
 
     #cell-three {
-        background: linear-gradient(90deg, #49aabc 0%, #49aabc00 100%);
+        background: linear-gradient(90deg, #ee8438 0%, #241e19 100%);
+    }
+
+    #cell-four {
+        background: linear-gradient(90deg, #49aabc 0%, #241e19 100%);
     }
 
     #nav-line {
@@ -506,6 +586,22 @@ button .submit-btn {
 
     .contact-card h1 {
         font-size: 3em;
+    }
+
+    .about-card {
+        width: 80vw;
+        padding: 2em;
+        margin-top: 5vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about-text h1 {
+        font-size: 3em;
+    }
+
+    .about-text p {
+        font-size: 1em;
     }
 }
 
